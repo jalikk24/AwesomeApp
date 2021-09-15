@@ -2,7 +2,15 @@ package com.asynchronous.awesomeapp.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PexelsModel {
+import java.io.Serializable;
+
+public class PexelsModel implements Serializable {
+
+    @SerializedName("id")
+    private Integer id;
+
+    @SerializedName("photographer")
+    private String photographer;
 
     @SerializedName("src")
     private PexelsModel src;
@@ -15,6 +23,22 @@ public class PexelsModel {
 
     @SerializedName("landscape")
     private String landscape;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getPhotographer() {
+        return photographer;
+    }
+
+    public void setPhotographer(String photographer) {
+        this.photographer = photographer;
+    }
 
     public PexelsModel getSrc() {
         return src;
