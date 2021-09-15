@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Awesome App</string>
+    <string name="token">563492ad6f91700001000001882f514ed6a84a5d81cc590cda71eae7</string>
+    <string name="failedToGetData">Failed to get Data</string>
+    <string name="offlineDevice">The device is Offline ! \n Check your own Connection and Try Again !</string>
+</resources>
