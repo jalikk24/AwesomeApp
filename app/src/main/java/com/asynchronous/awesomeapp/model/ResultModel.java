@@ -15,6 +15,9 @@ public class ResultModel {
     @SerializedName("photos")
     private List<PexelsModel> photos = null;
 
+    @SerializedName("total_results")
+    private Integer total_results;
+
     public Integer getPage() {
         return page;
     }
@@ -37,5 +40,13 @@ public class ResultModel {
 
     public void setPhotos(List<PexelsModel> photos) {
         this.photos = photos;
+    }
+
+    public Integer getTotal_results() {
+        return total_results;
+    }
+
+    public void setTotal_results(Integer total_results) {
+        this.total_results = total_results;
     }
 }

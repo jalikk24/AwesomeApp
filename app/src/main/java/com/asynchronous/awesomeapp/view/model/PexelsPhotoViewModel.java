@@ -18,7 +18,7 @@ public class PexelsPhotoViewModel extends BaseViewModel {
         this.pexelsPhotosRepository = pexelsPhotosRepository;
     }
 
-    public LiveData<ResultModel> getListPhotos() {
-        return this.pexelsPhotosRepository.getListPhotos();
+    public LiveData<ResultModel> getListPhotos(final Integer currentPage) {
+        return this.pexelsPhotosRepository.getListPhotos(currentPage);
     }
 }

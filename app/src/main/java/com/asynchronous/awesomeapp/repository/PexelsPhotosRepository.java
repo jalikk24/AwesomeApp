@@ -26,10 +26,10 @@ public class PexelsPhotosRepository extends BaseRepository {
         return instance;
     }
 
-    public LiveData<ResultModel> getListPhotos() {
+    public LiveData<ResultModel> getListPhotos(final Integer currentPage) {
         final MutableLiveData<ResultModel> liveData = new MutableLiveData<>();
         final ApiPexelsInterface apiPexelsInterface = ApiClient.getClient().create(ApiPexelsInterface.class);
-        final Call<ResultModel> responseCall = apiPexelsInterface.getListPhotos(application.getString(R.string.token));
+        final Call<ResultModel> responseCall = apiPexelsInterface.getListPhotos(application.getString(R.string.token), 10, currentPage);
         responseCall.enqueue(new Callback<ResultModel>() {
             ResultModel resultModel = new ResultModel();
             @Override
